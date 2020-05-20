@@ -161,14 +161,24 @@ if demo4vendor == "y":
 import boto3
 
 GetSecretValue
-    arn:aws:iam::064948119335:user/Tech0710/Tech0710Access
+    arn:aws:secretsmanager:us-east-1:064948119335:secret:Tech0710Access-U3h7gr 
+    try:
+        __version__ = get_distribution(__name__).version
+        __version__ = get_distribution('aws_secretsmanager_caching').version
+    except DistrubutionNotFound:
+        __version__ = '0.0.0'
 
 client = boto3.client(
-'dynamodb',
-    arn:aws:iam::064948119335:user/Tech0710/DSSdbAccess
+'dynamodb',    
+    arn:aws:secretsmanager:us-east-1:064948119335:secret:DSSdbAccess-fIkMja
 	aws_access_key_id = ACCESS_KEY
 	aws_secret_access_key = SECRET_ACCESS_KEY
 	region=us-east-1
+    try:
+        __version__ = get_distribution(__name__).version
+        __version__ = get_distribution('aws_secretsmanager_caching').version
+    except DistrubutionNotFound:
+        __version__ = '0.0.0'
 )
 
 dynamodb = boto3.resource('dynamodb')
@@ -195,6 +205,18 @@ table.put_item(
 					'vendor_contact': mostval_vendor_contact
 				}
 				
+try: https:// <firewall-IP>/api/?type=config&action=get&key=<key>&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address.. import PA.xls
+
+table.put_item(
+		try: from PA.xls get row1..rowZ for
+				Item={
+					'device': name,
+					'ip_address': Ip netmask,
+					'hospital': admin2,
+					'contact': code,
+					'vendor_contact': admin4
+				}
+
 Table.meta.client.get.waiter('table_exists').wait(TableName = 'devices')
 
 Print(Table.item_count)
